@@ -1,4 +1,4 @@
-# GitHub data for card.svg — refresh with scripts/refresh.py
+# GitHub data for card.svg — refresh with `cargo run --release -- refresh`
 # generated: 2026-10-20
 user=Quippy22
 joined=2022-06-05

@@ -17,10 +17,11 @@ pub struct Stats {
 }
 
 impl Stats {
-    /// Read `assets/stats.txt` (written by `scripts/refresh.py`).
+    /// Read `assets/stats.txt` (written by `cargo run --release -- refresh`).
     pub fn load(path: &str) -> Stats {
-        let raw = std::fs::read_to_string(path)
-            .unwrap_or_else(|_| panic!("{path} is missing — run scripts/refresh.py to fetch it"));
+        let raw = std::fs::read_to_string(path).unwrap_or_else(|_| {
+            panic!("{path} is missing — run `cargo run --release -- refresh` to fetch it")
+        });
 
         let mut kv: Vec<(String, String)> = Vec::new();
         for line in raw.lines() {

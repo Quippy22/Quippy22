@@ -32,7 +32,7 @@ jobs:
       - name: Refresh stats
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/refresh.py
+        run: cargo run --release -- refresh
 
       - name: Build the card
         run: cargo run --release

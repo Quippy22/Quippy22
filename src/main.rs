@@ -4,6 +4,7 @@ use xmltree::{Element, XMLNode};
 
 mod art;
 mod font;
+mod refresh;
 mod stats;
 mod svg;
 mod text;
@@ -172,11 +173,20 @@ fn defs() -> Element {
 }
 
 fn main() {
+    let args: Vec<String> = std::env::args().skip(1).collect();
+    if args.first().map(String::as_str) == Some("refresh") {
+        if let Err(err) = refresh::run(&args[1..]) {
+            eprintln!("refresh failed: {err}");
+            std::process::exit(1);
+        }
+        return;
+    }
+
     let mut art_path = "assets/art.xml".to_string();
     let mut stats_path = "assets/stats.txt".to_string();
     let mut out_path = "card.svg".to_string();
 
-    let mut args = std::env::args().skip(1);
+    let mut args = args.into_iter();
     while let Some(arg) = args.next() {
         let mut value = || {
             args.next()
@@ -190,6 +200,7 @@ fn main() {
                 println!(
                     "usage: cargo run -- [--art ART.xml] [--stats STATS.txt] [--out CARD.svg]"
                 );
+                println!("       cargo run -- refresh [--no-loc]");
                 return;
             }
             other => panic!("unknown argument: {other}"),
