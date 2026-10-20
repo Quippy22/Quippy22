@@ -207,9 +207,6 @@ fn main() {
         }
     }
 
-    let mut out = Vec::new();
-    build_svg(&art_path, &stats_path)
-        .write(&mut out)
-        .expect("write svg");
-    fs::write(&out_path, out).unwrap_or_else(|_| panic!("write {out_path}"));
+    let card = svg::serialize(&build_svg(&art_path, &stats_path));
+    fs::write(&out_path, card).unwrap_or_else(|_| panic!("write {out_path}"));
 }

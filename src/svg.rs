@@ -1,4 +1,56 @@
+use std::fmt::Write as _;
+
 use xmltree::{Element, XMLNode};
+
+/// Serialize the card with attributes in sorted order, so rebuilding unchanged
+/// data gives byte-identical output instead of a reshuffled file.
+pub fn serialize(root: &Element) -> String {
+    let mut out = String::from("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+    write_element(root, &mut out);
+    out
+}
+
+fn write_element(element: &Element, out: &mut String) {
+    let _ = write!(out, "<{}", element.name);
+
+    let mut attributes: Vec<_> = element.attributes.iter().collect();
+    attributes.sort_by(|a, b| a.0.cmp(b.0));
+    for (key, value) in attributes {
+        out.push(' ');
+        out.push_str(key);
+        out.push_str("=\"");
+        escape(value, true, out);
+        out.push('"');
+    }
+
+    if element.children.is_empty() {
+        out.push_str(" />");
+        return;
+    }
+
+    out.push('>');
+    for child in &element.children {
+        match child {
+            XMLNode::Element(child) => write_element(child, out),
+            XMLNode::Text(text) => escape(text, false, out),
+            other => panic!("unexpected node in the card: {other:?}"),
+        }
+    }
+    let _ = write!(out, "</{}>", element.name);
+}
+
+fn escape(text: &str, attribute: bool, out: &mut String) {
+    for ch in text.chars() {
+        match ch {
+            '&' => out.push_str("&amp;"),
+            '<' => out.push_str("&lt;"),
+            '>' => out.push_str("&gt;"),
+            '"' if attribute => out.push_str("&quot;"),
+            '\'' if attribute => out.push_str("&apos;"),
+            ch => out.push(ch),
+        }
+    }
+}
 
 /// Format a coordinate without trailing zeros ("12.5", "240").
 pub fn num(v: f64) -> String {
