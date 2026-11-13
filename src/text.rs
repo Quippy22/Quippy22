@@ -130,15 +130,23 @@ impl Panel {
         self.y += ROW_H;
     }
 
-    /// One line of facts, dot-separated. Items are placed by coordinate rather
-    /// than by spaces, which renderers collapse differently.
+    /// One line of facts, dot-separated, centered across the panel width.
     fn chips(&mut self, items: &[&str]) {
-        let mut x = 0.0;
+        let sep = " · ";
+        let space_w = svg::width(" ", FS_BODY);
+        let sep_w = svg::width(sep, FS_BODY);
+        let total_w: f64 = items.iter().map(|item| svg::width(item, FS_BODY)).sum::<f64>()
+            + if items.len() > 1 {
+                (items.len() - 1) as f64 * sep_w
+            } else {
+                0.0
+            };
+        let mut x = (self.w - total_w) / 2.0;
         for (i, item) in items.iter().enumerate() {
             if i > 0 {
                 self.out
-                    .push(svg::text(x, self.y, FS_BODY, 400, MUTED, "·"));
-                x += svg::width(" · ", FS_BODY);
+                    .push(svg::text(x + space_w, self.y, FS_BODY, 400, MUTED, "·"));
+                x += sep_w;
             }
             self.out
                 .push(svg::text(x, self.y, FS_BODY, 400, TEXT, item));
