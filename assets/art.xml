@@ -374,6 +374,9 @@
     <glyph fg="#202020">.</glyph>
     <glyph fg="#202020">.</glyph>
     <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
   </line>
   <line>
     <glyph fg="#666666">:</glyph>
@@ -406,6 +409,16 @@
     <glyph fg="#202020">.</glyph>
     <glyph fg="#202020">.</glyph>
     <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
   </line>
   <line>
     <glyph fg="#676767">:</glyph>
@@ -429,6 +442,17 @@
     <glyph fg="#201f22">.</glyph>
     <glyph fg="#1d1d1d">.</glyph>
     <glyph fg="#1f1f1f">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
     <glyph fg="#202020">.</glyph>
     <glyph fg="#202020">.</glyph>
     <glyph fg="#202020">.</glyph>
@@ -472,6 +496,13 @@
     <glyph fg="#202020">.</glyph>
     <glyph fg="#202020">.</glyph>
     <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
   </line>
   <line>
     <glyph fg="#505050">,</glyph>
@@ -504,6 +535,7 @@
     <glyph fg="#1e1e1e">.</glyph>
     <glyph fg="#1e1e1e">.</glyph>
     <glyph fg="#1f1f1f">.</glyph>
+    <glyph fg="#202020">.</glyph>
     <glyph fg="#202020">.</glyph>
     <glyph fg="#202020">.</glyph>
     <glyph fg="#202020">.</glyph>
@@ -848,6 +880,7 @@
     <glyph fg="#414141">'</glyph>
     <glyph fg="#373737">.</glyph>
     <glyph fg="#2e2e2e">.</glyph>
+    <glyph fg="#202020">.</glyph>
   </line>
   <line>
     <glyph fg="#202020">.</glyph>
@@ -889,6 +922,7 @@
     <glyph fg="#777777">c</glyph>
     <glyph fg="#424242">'</glyph>
     <glyph fg="#3a3a3a">.</glyph>
+    <glyph fg="#202020">.</glyph>
   </line>
   <line>
     <glyph fg="#202020">.</glyph>
@@ -929,6 +963,8 @@
     <glyph fg="#fbfbfb">M</glyph>
     <glyph fg="#99999a">d</glyph>
     <glyph fg="#414142">'</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
   </line>
   <line>
     <glyph fg="#202020">.</glyph>
@@ -967,6 +1003,10 @@
     <glyph fg="#949495">d</glyph>
     <glyph fg="#cbcbcc">K</glyph>
     <glyph fg="#bfbfc0">O</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
   </line>
   <line>
     <glyph fg="#202020">.</glyph>
@@ -1003,6 +1043,12 @@
     <glyph fg="#404040">'</glyph>
     <glyph fg="#474747">'</glyph>
     <glyph fg="#595959">;</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
   </line>
   <line>
     <glyph fg="#202020">.</glyph>
@@ -1035,6 +1081,16 @@
     <glyph fg="#292929">.</glyph>
     <glyph fg="#373737">.</glyph>
     <glyph fg="#3a3a3a">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
   </line>
   <line>
     <glyph fg="#202020">.</glyph>
@@ -1061,6 +1117,22 @@
     <glyph fg="#292929">.</glyph>
     <glyph fg="#212121">.</glyph>
     <glyph fg="#2b2b2b">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
   </line>
   <line>
     <glyph fg="#202020">.</glyph>
@@ -1082,6 +1154,27 @@
     <glyph fg="#2d2d2d">.</glyph>
     <glyph fg="#292929">.</glyph>
     <glyph fg="#242424">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
   </line>
   <line>
     <glyph fg="#202020">.</glyph>
@@ -1102,6 +1195,28 @@
     <glyph fg="#2c2c2c">.</glyph>
     <glyph fg="#292929">.</glyph>
     <glyph fg="#282828">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
   </line>
   <line>
     <glyph fg="#202020">.</glyph>
@@ -1121,6 +1236,28 @@
     <glyph fg="#303030">.</glyph>
     <glyph fg="#2c2c2c">.</glyph>
     <glyph fg="#2b2b2b">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
+    <glyph fg="#202020">.</glyph>
     <glyph fg="#202020">.</glyph>
   </line>
 </art>

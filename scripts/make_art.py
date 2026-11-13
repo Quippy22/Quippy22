@@ -113,8 +113,9 @@ def to_xml(rows):
         lines.append("  <line>")
         for ch, fg in row:
             if ch == " ":
-                continue  # blank cell: nothing to draw
-            lines.append('    <glyph fg="#%02x%02x%02x">%s</glyph>' % (*fg, sax.escape(ch)))
+                lines.append('    <glyph fg="#202020">.</glyph>')
+            else:
+                lines.append('    <glyph fg="#%02x%02x%02x">%s</glyph>' % (*fg, sax.escape(ch)))
         lines.append("  </line>")
     lines.append("</art>")
     return "\n".join(lines) + "\n"

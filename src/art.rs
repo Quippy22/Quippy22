@@ -68,17 +68,19 @@ pub fn load(path: &str, font_size: f64, advance: f64, cell: f64) -> Art {
     // One <text> per same-colour run of glyphs: the advance is exact, so a run
     // needs no per-glyph x coordinates.
     let mut elems = Vec::new();
+    let default_glyph = (".".to_string(), "#202020".to_string());
     for (r, row) in grid.iter().enumerate().skip(top).take(rows) {
         let mut c = left;
         while c <= right {
-            let Some((txt, fill)) = row.get(c) else { break };
+            let (txt, fill) = row.get(c).unwrap_or(&default_glyph);
             if !inked(txt) {
                 c += 1;
                 continue;
             }
             let start = c;
             let mut run = String::new();
-            while let Some((txt, f)) = row.get(c) {
+            while c <= right {
+                let (txt, f) = row.get(c).unwrap_or(&default_glyph);
                 if f != fill || !inked(txt) {
                     break;
                 }
