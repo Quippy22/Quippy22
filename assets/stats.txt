@@ -1,5 +1,5 @@
 # GitHub data for card.svg — refresh with `cargo run --release -- refresh`
-# generated: 2026-11-13
+# generated: 2026-11-14
 user=Quippy22
 joined=2022-06-05
 repos=10
@@ -7,4 +7,4 @@ followers=2
 stars=0
 commits=1077
 loc=44085
-languages=Rust:1429541,Python:255295,HTML:87704,Lua:47773,CSS:22663,Shell:22134,JavaScript:15949
+languages=Rust:1429953,Python:255327,HTML:87704,Lua:47773,CSS:22663,Shell:22134,JavaScript:15949
