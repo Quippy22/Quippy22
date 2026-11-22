@@ -21,6 +21,15 @@ const API: &str = "https://api.github.com";
 const STATS: &str = "assets/stats.txt";
 const UA: &str = "quippy22-card";
 
+/// Repositories to exclude by name (e.g. `&["some-repo"]`).
+const IGNORED_REPOS: &[&str] = &["serpantinum"];
+
+/// Whether to ignore forked repositories.
+const IGNORE_FORKS: bool = false;
+
+/// Languages to exclude from stats (e.g. `&["HTML", "CSS"]`).
+const IGNORED_LANGUAGES: &[&str] = &[];
+
 /// Files counted as code. Anything else (assets, configs, docs) is ignored.
 const CODE_EXT: &[&str] = &[
     ".rs", ".py", ".lua", ".sh", ".bash", ".zsh", ".fish", ".html", ".css", ".js", ".ts", ".jsx",
@@ -44,7 +53,11 @@ const SKIP_DIRS: &[&str] = &[
 
 pub fn run(args: &[String]) -> Result<(), String> {
     let no_loc = args.iter().any(|arg| arg == "--no-loc");
-    if let Some(other) = args.iter().find(|arg| arg.as_str() != "--no-loc") {
+    let ignore_forks = args.iter().any(|arg| arg == "--no-forks");
+    if let Some(other) = args
+        .iter()
+        .find(|arg| arg.as_str() != "--no-loc" && arg.as_str() != "--no-forks")
+    {
         return Err(format!("unknown argument: {other}"));
     }
 
@@ -83,6 +96,21 @@ pub fn run(args: &[String]) -> Result<(), String> {
         }
         page += 1;
     }
+
+    repos.retain(|repo| {
+        let name = repo["name"].as_str().unwrap_or("");
+        let is_fork = repo["fork"].as_bool().unwrap_or(false);
+        if (IGNORE_FORKS || ignore_forks) && is_fork {
+            println!("  skipping fork: {name}");
+            return false;
+        }
+        if IGNORED_REPOS.contains(&name) {
+            println!("  skipping ignored repo: {name}");
+            return false;
+        }
+        true
+    });
+
     kv.insert("repos".into(), repos.len().to_string());
     let stars: u64 = repos
         .iter()
@@ -287,6 +315,9 @@ fn sum_languages(
         let bytes = client.api(&format!("/repos/{user}/{name}/languages"))?;
         let bytes = bytes.as_object().ok_or("languages: expected an object")?;
         for (language, size) in bytes {
+            if IGNORED_LANGUAGES.contains(&language.as_str()) {
+                continue;
+            }
             *languages.entry(language.clone()).or_insert(0) += size.as_u64().unwrap_or(0);
         }
     }
